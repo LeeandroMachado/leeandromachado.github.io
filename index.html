@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+		<title>Number Jumper</title>
+		<script src="js/phaser.js"></script>
+		<script src="js/game.js"></script>
+		<script src="js/boot.js"></script>
+		<script src="js/preload.js"></script>
+		<script src="js/gametitle.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/fase1.js"></script>
+		<script src="js/fase2.js"></script>
+		<script src="js/fase3.js"></script>
+		<script src="js/fase4.js"></script>
+		<link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+		<style>
+			body{
+				margin: 0;
+				font-family: 'cartwheelregular';
+				font-size: 62px;
+			}
+			
+			p { font-family: 'cartwheelregular', Arial, sans-serif; }
+			
+			.fontPreload{    position:absolute;    left:-100px;}
+		</style>
+		<script>
+			(function() {
+				height = 1080;
+				width = 1920;
+				game = new Phaser.Game(width,height,Phaser.CANVAS,'game');
+				game.state.add("Boot",boot);
+				game.state.add("Preload",preload);
+				game.state.add("GameTitle",gameTitle);
+				game.state.add("Menu",menu);
+				game.state.add("Fase1",fase1);
+				game.state.add("Fase2",fase2);
+				game.state.add("Fase3",fase3);
+				game.state.add("Fase4",fase4);
+				
+				game.state.start("Boot");
+			})();    
+		</script>
+	</head>
+	<body>
+		<div class="fontPreload" style="font-family: cartwheelregular;">.</div>
+	</body>
+</html>
